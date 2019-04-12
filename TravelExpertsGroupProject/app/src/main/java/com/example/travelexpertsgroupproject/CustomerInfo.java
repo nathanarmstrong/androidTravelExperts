@@ -10,7 +10,6 @@ import com.example.travelexpertsgroupproject.model.Customer;
 public class CustomerInfo extends AppCompatActivity {
     private Customer loginCust;
     private TextView tvFistName;
-    private TextView tvLastName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +18,6 @@ public class CustomerInfo extends AppCompatActivity {
         Intent intent = getIntent();
         loginCust = (Customer) intent.getSerializableExtra("CUSTOMER");
         tvFistName = findViewById(R.id.tvFirstName);
-        tvLastName = findViewById(R.id.tvLastName);
         tvFistName.setText(loginCust.getCustFirstName());
-        tvLastName.setText(loginCust.getCustLastName());
     }
 }

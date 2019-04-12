@@ -8,15 +8,75 @@ import android.util.Log;
 
 import com.example.travelexpertsgroupproject.model.Customer;
 
-public class DatabaseHelper extends SQLiteOpenHelper {
-    public static final String DBNAME = "TravelExpertsSqlLite.db";
-    public static final String DBLOCATION = "/data/data/com.example.travelexpertsgroupproject/databases/";
-    private Context mContext;
-    private SQLiteDatabase mDatabase;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
-    public DatabaseHelper (Context context){
-        super(context, DBNAME, null, 1);
-        this.mContext = context;
+public class DatabaseHelper extends SQLiteOpenHelper {
+    private static String name = "TravelExpertsSqlLite.db";
+    private static File path;
+    private final Context myContext;
+    private SQLiteDatabase myDatabase;
+
+    public DatabaseHelper(Context context) {
+        super(context, name, null, 1);
+        this.myContext = context;
+        path = context.getDatabasePath(DatabaseHelper.name);
+    }
+
+    public void createDataBase()
+    {
+        if (dbExist())
+        {
+            // do nothing
+        }
+        else
+        {
+            copyDatabase();
+        }
+
+    }
+
+    private void copyDatabase() {
+        try {
+            InputStream myInput = myContext.getAssets().open(name);
+            OutputStream myOutput = new FileOutputStream(path);
+
+            byte [] buffer = new byte[1024];
+            int length;
+            while ((length = myInput.read(buffer)) > 0)
+            {
+                myOutput.write(buffer, 0, length);
+            }
+            myOutput.flush();
+            myOutput.close();
+            myInput.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private boolean dbExist(){
+        SQLiteDatabase checkdb = null;
+//        myContext.getDatabasePath(name.get)
+        try {
+            checkdb = SQLiteDatabase.openDatabase(path.getPath() + name, null, SQLiteDatabase.OPEN_READONLY);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (checkdb !=null)
+        {
+            checkdb.close();
+        }
+        return checkdb != null ? true : false;
+
+    }
+
+    public void openDataBase()
+    {
+        myDatabase = SQLiteDatabase.openDatabase(path + name, null, SQLiteDatabase.OPEN_READWRITE);
     }
 
     @Override
@@ -29,33 +89,4 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public void openDatabase(){
-        String dbPath = mContext.getDatabasePath(DBNAME).getPath();
-        if(mDatabase != null && mDatabase.isOpen()){
-            return;
-        }
-        mDatabase = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);
-    }
-
-    public void closeDatabase(){
-        if(mDatabase != null){
-            mDatabase.close();
-        }
-    }
-
-    public Customer getCustomer(String CustEmail, String CustPass){
-        Customer cust = null;
-        openDatabase();
-        String[] Args = {CustEmail, CustPass};
-        try{
-            Cursor cursor = mDatabase.rawQuery("select * from Customers where CustEmail=? and CustPass=?", Args);
-            cursor.moveToNext();
-            cust = new Customer(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5),  cursor.getString(6), cursor.getString(7),  cursor.getString(8),  cursor.getString(9), cursor.getString(10), cursor.getString(12));
-            cursor.close();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        closeDatabase();
-        return cust;
-    }
 }
