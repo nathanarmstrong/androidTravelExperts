@@ -62,7 +62,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase checkdb = null;
 //        myContext.getDatabasePath(name.get)
         try {
-            checkdb = SQLiteDatabase.openDatabase(path.getPath() + name, null, SQLiteDatabase.OPEN_READONLY);
+            checkdb = SQLiteDatabase.openDatabase(path.getPath(), null, SQLiteDatabase.OPEN_READONLY);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -76,7 +76,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void openDataBase()
     {
-        myDatabase = SQLiteDatabase.openDatabase(path + name, null, SQLiteDatabase.OPEN_READWRITE);
+        myDatabase = SQLiteDatabase.openDatabase(path.getPath(), null, SQLiteDatabase.OPEN_READWRITE);
     }
 
     @Override
