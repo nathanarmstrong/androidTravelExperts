@@ -36,13 +36,21 @@ public class MainActivity extends AppCompatActivity {
                 etEmail = findViewById(R.id.etEmail);
                 String user = etEmail.getText().toString();
                 String pass =  etPass.getText().toString();
-                if(source.getCustomer(user, pass) != null){
-                    Intent intent = new Intent(getApplicationContext(), CustomerInfo.class);
-                    mCustomer = source.getCustomer(user, pass);
-                    intent.putExtra("CUSTOMER", mCustomer);
-                    source.db.close();
-                    startActivity(intent);
+                try{
+                    if(source.getCustomer(user, pass) != null){
+                        Intent intent = new Intent(getApplicationContext(), CustomerInfo.class);
+                        mCustomer = source.getCustomer(user, pass);
+                        intent.putExtra("CUSTOMER", mCustomer);
+                        source.db.close();
+                        startActivity(intent);
+                    }else{
+                        tvError = findViewById(R.id.tvError);
+                        tvError.setText("Failed to login");
+                    }
+                }catch (Exception e){
+                    throw e;
                 }
+
 
             }
         });

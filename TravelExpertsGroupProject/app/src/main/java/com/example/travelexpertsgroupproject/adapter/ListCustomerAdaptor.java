@@ -36,7 +36,7 @@ public class ListCustomerAdaptor extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = View.inflate(mContext, R.layout.activity_customer_info, null);
-        TextView tvFistName = (TextView) v.findViewById(R.id.tvFirstName);
+        TextView tvFistName = (TextView) v.findViewById(R.id.tvUpdateProvince);
         tvFistName.setText(mCustomer.getCustFirstName());
 
         return v;
