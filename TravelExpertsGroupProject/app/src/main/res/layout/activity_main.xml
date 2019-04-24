@@ -81,11 +81,12 @@
         android:id="@+id/tvError"
         android:layout_width="300dp"
         android:layout_height="33dp"
-        android:layout_marginStart="67dp"
+        android:layout_marginStart="44dp"
         android:layout_marginEnd="44dp"
-        android:layout_marginBottom="110dp"
+        android:layout_marginBottom="640dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
