@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -350,7 +351,9 @@ public class UpdateCustomerActivity extends AppCompatActivity {
         btnChangePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(etChangePass.getText() == etChangePassConfim.getText()){
+                Log.d("Password1", etChangePass.getText()+ "");
+                Log.d("Password2", etChangePassConfim.getText()+ "");
+                if(etChangePass.getText().toString().equals(etChangePassConfim.getText().toString())){
                     Cust.setCustPass(etChangePass.getText() + "");
                     source.update(Cust);
                     Intent intent = new Intent(getApplicationContext(), CustomerInfo.class);
@@ -361,8 +364,6 @@ public class UpdateCustomerActivity extends AppCompatActivity {
                             .setTitle("Password does not match")
                             .setMessage("Did you want to try again?")
 
-                            // Specifying a listener allows you to take an action before dismissing the dialog.
-                            // The dialog is automatically dismissed when a dialog button is clicked.
                             .setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     // Continue with delete operation
