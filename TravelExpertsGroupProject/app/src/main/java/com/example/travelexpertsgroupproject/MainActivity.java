@@ -10,9 +10,13 @@ import android.widget.TextView;
 
 import com.example.travelexpertsgroupproject.model.Customer;
 import com.example.travelexpertsgroupproject.model.CustomerDB;
+import com.example.travelexpertsgroupproject.model.SignUpActivity;
+
+import java.sql.SQLException;
 
 
 public class MainActivity extends AppCompatActivity {
+
     private EditText etEmail;
     private EditText etPass;
     private TextView tvError;
@@ -20,12 +24,16 @@ public class MainActivity extends AppCompatActivity {
     private Button btnlogin;
     private CustomerDB source;
 
+    // Andy Code
+    private Button btnSignUp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         btnlogin = findViewById(R.id.btnLogin);
+
         source = new CustomerDB(this);
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
@@ -50,8 +58,17 @@ public class MainActivity extends AppCompatActivity {
                 }catch (Exception e){
                     throw e;
                 }
+            }
+        });
 
+        // Andy Code
+        btnSignUp = findViewById(R.id.btnSignUp);
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                Intent signUpIntent = new Intent(getApplicationContext(), SignUpActivity.class);
+                startActivity(signUpIntent);
             }
         });
     }

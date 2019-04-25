@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.travelexpertsgroupproject">
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -12,6 +13,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".CustomerInfo"></activity>
         <activity android:name=".UpdateCustomerActivity"></activity>
+
+        <activity android:name=".model.SignUpActivity"></activity>
+        <activity android:name=".CustomerInfo" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
