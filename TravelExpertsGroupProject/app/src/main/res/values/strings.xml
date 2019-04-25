@@ -8,72 +8,71 @@
     </string-array>
 
     <string-array name="provinces">
-        <item value="AB">Alberta</item>
-        <item value="BC">British Columbia</item>
-        <item value="MB">Manitoba</item>
-        <item value="NB">New Brunswick</item>
-        <item value="NL">Newfoundland and Labrador</item>
-        <item value="NT">Northwest Territories</item>
-        <item value="NS">Nova Scotia</item>
-        <item value="NU">Nunavut</item>
-        <item value="ON">Ontario</item>
-        <item value="PE">Prince Edward Island</item>
-        <item value="QC">Quebec</item>
-        <item value="SK">Saskatchewan</item>
-        <item value="YT">Yukon</item>
+        <item name="AB">AB</item>
+        <item name="BC">BC</item>
+        <item name="MB">MB</item>
+        <item name="NB">NB</item>
+        <item name="NL">NL</item>
+        <item name="NT">NT</item>
+        <item name="NS">NS</item>
+        <item name="NU">NU</item>
+        <item name="ON">ON</item>
+        <item name="PE">PE</item>
+        <item name="QC">QC</item>
+        <item name="SK">SK</item>
+        <item name="YT">YT</item>
     </string-array>
 
     <string-array name="states">
-        <item value="AL">Alabama</item>
-        <item value="AK">Alaska</item>
-        <item value="AZ">Arizona</item>
-        <item value="AR">Arkansas</item>
-        <item value="CA">California</item>
-        <item value="CO">Colorado</item>
-        <item value="CT">Connecticut</item>
-        <item>Delaware</item>
-        <item>Florida</item>
-        <item>Georgia</item>
-        <item>Hawaii</item>
-        <item>Idaho</item>
-        <item>Illinois</item>
-        <item>Indiana</item>
-        <item>Iowa</item>
-        <item>Kansas</item>
-        <item>Kentucky</item>
-        <item>Louisiana</item>
-        <item>Maine</item>
-        <item>Maryland</item>
-        <item>Massachusetts</item>
-        <item>Michigan</item>
-        <item>Minnesota</item>
-        <item>Mississippi</item>
-        <item>Missouri</item>
-        <item>Montana</item>
-        <item>Nebraska</item>
-        <item>Nevada</item>
-        <item>Nevada</item>
-        <item>New Hampshire</item>
-        <item>New Jersey</item>
-        <item>New Mexico</item>
-        <item>New York</item>
-        <item>North Carolina</item>
-        <item>North Dakota</item>
-        <item>Ohio</item>
-        <item>Oklahoma</item>
-        <item>Oregon</item>
-        <item>Pennsylvania</item>
-        <item>Rhode Island</item>
-        <item>South Carolina</item>
-        <item>South Dakota</item>
-        <item>Tennessee</item>
-        <item>Texas</item>
-        <item>Utah</item>
-        <item>Vermont</item>
-        <item>Virginia</item>
-        <item>Washington</item>
-        <item>West Virginia</item>
-        <item>Wisconsin</item>
-        <item>Wyoming</item>
+        <item name="AL">AL</item>
+        <item name="AK">AK</item>
+        <item name="AZ">AZ</item>
+        <item name="AR">AR</item>
+        <item name="CA">CA</item>
+        <item name="CO">CO</item>
+        <item name="CT">CT</item>
+        <item>DE</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RI</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
     </string-array>
 </resources>

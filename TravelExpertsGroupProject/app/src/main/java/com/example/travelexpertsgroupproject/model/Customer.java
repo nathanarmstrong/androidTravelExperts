@@ -15,10 +15,11 @@ public class Customer implements Serializable {
     private String CustHomePhone;
     private String CustBusPhone;
     private String CustEmail;
+    private String CustLoginID;
     private int AgentId;
     private String CustPass;
 
-    public Customer(int customerId, String custFirstName, String custLastName, String custAddress, String custCity, String custProv, String custPostal, String custCountry, String custHomePhone, String custBusPhone, String custEmail, int agentId, String custPass) {
+    public Customer(int customerId, String custFirstName, String custLastName, String custAddress, String custCity, String custProv, String custPostal, String custCountry, String custHomePhone, String custBusPhone, String custEmail, int agentId, String custLoginID, String custPass) {
         CustomerId = customerId;
         CustFirstName = custFirstName;
         CustLastName = custLastName;
@@ -30,6 +31,7 @@ public class Customer implements Serializable {
         CustHomePhone = custHomePhone;
         CustBusPhone = custBusPhone;
         CustEmail = custEmail;
+        CustLoginID = custLoginID;
         AgentId = agentId;
         CustPass = custPass;
     }
@@ -134,6 +136,14 @@ public class Customer implements Serializable {
 
     public String getCustPass() {
         return CustPass;
+    }
+
+    public String getCustLoginID() {
+        return CustLoginID;
+    }
+
+    public void setCustLoginID(String custLoginID) {
+        CustLoginID = custLoginID;
     }
 
     public void setCustPass(String custPass) {

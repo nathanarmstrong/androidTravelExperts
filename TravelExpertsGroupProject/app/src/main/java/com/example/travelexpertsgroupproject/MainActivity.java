@@ -12,12 +12,10 @@ import com.example.travelexpertsgroupproject.model.Customer;
 import com.example.travelexpertsgroupproject.model.CustomerDB;
 import com.example.travelexpertsgroupproject.model.SignUpActivity;
 
-import java.sql.SQLException;
-
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText etEmail;
+    private EditText etLoginID;
     private EditText etPass;
     private TextView tvError;
     private Customer mCustomer;
@@ -41,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 etPass =  findViewById(R.id.etPass);
-                etEmail = findViewById(R.id.etEmail);
-                String user = etEmail.getText().toString();
+                etLoginID = findViewById(R.id.etLoginID);
+                String user = etLoginID.getText().toString();
                 String pass =  etPass.getText().toString();
                 try{
                     if(source.getCustomer(user, pass) != null){
