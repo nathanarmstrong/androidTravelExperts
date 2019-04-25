@@ -42,83 +42,6 @@
                 app:layout_constraintVertical_bias="0.054" />
 
             <TextView
-                android:id="@+id/tvSelectYourCountry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Country"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.53"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.12" />
-
-            <Spinner
-                android:id="@+id/spCountry"
-                android:layout_width="300dp"
-                android:layout_height="35dp"
-                android:layout_marginBottom="10dp"
-                android:spinnerMode="dropdown"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvSelectYourCountry"
-                app:layout_constraintVertical_bias="0.003" />
-
-            <TextView
-                android:id="@+id/tvSelectYourProv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Province"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.53"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.249" />
-
-            <Spinner
-                android:id="@+id/spProvince"
-                android:layout_width="300dp"
-                android:layout_height="35dp"
-                android:spinnerMode="dropdown"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvSelectYourProv"
-                app:layout_constraintVertical_bias="0.002" />
-
-            <Button
-                android:id="@+id/btnNext"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="Next"
-                android:textAlignment="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.393" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="438dp"
-            android:orientation="vertical"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:layout_constraintVertical_bias="0.0">
-
-            <TextView
                 android:id="@+id/tvFirstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -183,6 +106,69 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
+                android:id="@+id/tvSelectYourProv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Province"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.53"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.249" />
+
+            <Spinner
+                android:id="@+id/spProvince"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:spinnerMode="dropdown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSelectYourProv"
+                app:layout_constraintVertical_bias="0.002" />
+
+            <TextView
+                android:id="@+id/tvSelectYourCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.53"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.12" />
+
+            <Spinner
+                android:id="@+id/spCountry"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="10dp"
+                android:spinnerMode="dropdown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSelectYourCountry"
+                app:layout_constraintVertical_bias="0.003" />
+
+            <TextView
+                android:id="@+id/tvPostalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Postal Code"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etPostalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
                 android:id="@+id/tvCity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -205,18 +191,88 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/tvPostalCode"
+                android:id="@+id/tvHomePhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Postal Code"
+                android:text="Home Phone"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/etPostalCode"
+                android:id="@+id/etHomePhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tvBusPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buisness Phone"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etBusPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tvCustLoginID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etCustLoginID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tvCustPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etCustPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tvConfirmPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirm Password"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etConfirmPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Submit"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.393" />
 
         </LinearLayout>
 

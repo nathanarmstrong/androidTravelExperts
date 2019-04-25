@@ -8,29 +8,29 @@
     </string-array>
 
     <string-array name="provinces">
-        <item>Alberta</item>
-        <item>British Columbia</item>
-        <item>Manitoba</item>
-        <item>New Brunswick</item>
-        <item>Newfoundland and Labrador</item>
-        <item>Northwest Territories</item>
-        <item>Nova Scotia</item>
-        <item>Nunavut</item>
-        <item>Ontario</item>
-        <item>Prince Edward Island</item>
-        <item>Quebec</item>
-        <item>Saskatchewan</item>
-        <item>Yukon</item>
+        <item value="AB">Alberta</item>
+        <item value="BC">British Columbia</item>
+        <item value="MB">Manitoba</item>
+        <item value="NB">New Brunswick</item>
+        <item value="NL">Newfoundland and Labrador</item>
+        <item value="NT">Northwest Territories</item>
+        <item value="NS">Nova Scotia</item>
+        <item value="NU">Nunavut</item>
+        <item value="ON">Ontario</item>
+        <item value="PE">Prince Edward Island</item>
+        <item value="QC">Quebec</item>
+        <item value="SK">Saskatchewan</item>
+        <item value="YT">Yukon</item>
     </string-array>
 
     <string-array name="states">
-        <item>Alabama</item>
-        <item>Alaska</item>
-        <item>Arizona</item>
-        <item>Arkansas</item>
-        <item>California</item>
-        <item>Colorado</item>
-        <item>Connecticut</item>
+        <item value="AL">Alabama</item>
+        <item value="AK">Alaska</item>
+        <item value="AZ">Arizona</item>
+        <item value="AR">Arkansas</item>
+        <item value="CA">California</item>
+        <item value="CO">Colorado</item>
+        <item value="CT">Connecticut</item>
         <item>Delaware</item>
         <item>Florida</item>
         <item>Georgia</item>
