@@ -25,6 +25,7 @@ public class CustomerInfo extends AppCompatActivity {
     private Customer loginCust;
     private TextView tvFistName;
     private Button btnUpdate;
+    private Button btnSignOut;
     private ArrayList<BookingDetails> bookingDetails;
     private BookingDetailsDB source;
 
@@ -49,6 +50,14 @@ public class CustomerInfo extends AppCompatActivity {
             }
         });
 
+        btnSignOut = findViewById(R.id.btnSignOut);
+        btnSignOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent SignOut = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(SignOut);
+            }
+        });
 
 
         bookingDetails = source.GetBookingDetails(loginCust);
